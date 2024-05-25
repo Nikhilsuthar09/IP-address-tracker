@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="input-date-container">
+          <div class="day-container">
+            <p>day</p>
+            <input type="number" placeholder="DD" id="day" class="input" />
+            <span class="span-day">This field is required</span>
+          </div>
+          <div class="month-container">
+            <p>month</p>
+            <input type="number" placeholder="MM" id="month" class="input" />
+            <span class="span-month">This field is required</span>
+          </div>
+          <div class="year-container">
+            <p>year</p>
+            <input type="number" placeholder="YYYY" id="year" class="input" />
+            <span class="span-year">This field is required</span>
+          </div>
+        </div>
+        <div class="divider">
+          <div class="line"></div>
+          <div class="img" onclick="calculate()">
+            <img src="assets/images/icon-arrow.svg" alt="" />
+          </div>
+        </div>
+        <div class="output-container">
+          <div class="output-year-container">
+            <div class="output"><h1 class="calculated-years">--</h1></div>
+            <div class="h1-black"><h1>years</h1></div>
+          </div>
+          <div class="output-month-container">
+            <div class="output"><h1 class="calculated-months">--</h1></div>
+            <div class="h1-black">
+              <h1>months</h1>
+            </div>
+          </div>
+          <div class="output-day-container">
+            <div class="output"><h1 class="calculated-days">--</h1></div>
+            <div class="h1-black"><h1>days</h1></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/profile/Nikhilsuthar09"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.linkedin.com/in/nikhil-suthar-137964264/"
+          target="_blank"
+          >Nikhil Suthar</a
+        >.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(0, 0%, 86%);
+  font-family: "Poppins", sans-serif;
+}
+main {
+  min-height: 96vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 68vh;
+  width: 32em;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding-top: 36px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 15px;
+  border-bottom-right-radius: 30%;
+}
+.day-container,
+.month-container,
+.year-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+span {
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 400;
+  color: #ff5757;
+  display: none;
+}
+.input-date-container {
+  display: flex;
+  gap: 20px;
+}
+.input-date-container p {
+  font-size: 9px;
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  height: 44px;
+  width: 98px;
+  border: 0.5px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 19px;
+  font-weight: 800;
+  padding-left: 16px;
+  color: hsl(0, 0%, 8%);
+}
+input[type="number"]:focus {
+  outline: none;
+  border-color: #854dff;
+}
+::placeholder {
+  color: #716f6f;
+  font-weight: 800;
+  font-size: 17px;
+  padding-left: 8px;
+  /* padding-top: 12px; */
+  /* padding-bottom: 4px; */
+}
+.divider {
+  display: flex;
+  align-items: center;
+}
+.img {
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  padding: 13px 12px;
+  cursor: pointer;
+}
+.img:hover {
+  background-color: hsl(0, 0%, 8%);
+  transition: 0.5s ease-out;
+}
+.img img {
+  height: 24px;
+  width: 32px;
+  transform: translateY(2px);
+}
+.line {
+  width: 100%;
+  height: 1.5px;
+  background-color: hsl(0, 0%, 94%);
+}
+.output-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 65px;
+  margin-top: 9px;
+}
+.output-year-container,
+.output-month-container,
+.output-day-container {
+  display: flex;
+  align-items: center;
+}
+.output {
+  color: hsl(259, 100%, 65%);
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+h1 {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 58px;
+}
+.h1-black {
+  color: hsl(0, 0%, 8%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (max-width:530px) {
+  .container{
+    width: 22em;
+    height: 55vh;
+    gap: 60px;
+    justify-content:center;
+    padding-top: 0;
+  }
+  input[type="number"]{
+    width: 80px;
+  }
+  .divider{
+    position: relative;
+    /* margin-top: 16px; */
+  }
+  .img{
+    position: absolute;
+    transform: translateX(108px);
+  }
+}
