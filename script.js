@@ -10,6 +10,14 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+// custom marker
+const customIcon = L.icon({
+  iconUrl: "images/icon-location.svg", // Adjust the path as necessary
+  iconSize: [30, 40], // Size of the icon
+  iconAnchor: [15, 40], // Point of the icon which will correspond to marker's location
+  popupAnchor: [0, -40], // Point from which the popup should open relative to the iconAnchor
+});
+
 //  updates information on fetching data from api
 function updateInfo(data) {
   document.getElementById("ip-address").textContent = data.ip;
@@ -25,16 +33,15 @@ function updateInfo(data) {
   const lat = data.location.lat;
   const lng = data.location.lng;
   map.setView([lat, lng], 13);
-  
+
   // add a marker to the map
-  L.marker([lat, lng])
+  L.marker([lat, lng], { icon: customIcon })
     .addTo(map)
     .bindPopup(
       `<b>Location: </b>${data.location.city}, ${data.location.region} <br><b>IP: </b> ${data.ip}`
     )
     .openPopup();
 }
-
 
 //function to make a get request to api
 function fetchInfo(query) {
